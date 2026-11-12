@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase-admin'
 import { v4 as uuidv4 } from 'uuid'
 
-export const runtime = 'nodejs'
+
 export const maxDuration = 60
 
 export async function POST(req: NextRequest) {
