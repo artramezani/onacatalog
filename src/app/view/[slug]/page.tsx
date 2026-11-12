@@ -1,8 +1,6 @@
-type Props = {
-  params: Promise<{ slug: string }>
-}
+export const instant = false
 
-export default async function ViewPage({ params }: Props) {
+export default async function ViewPage({ params }: PageProps<'/view/[slug]'>) {
   const { slug } = await params
 
   return (

@@ -1,11 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import Link from 'next/link'
 
-export default function ProcessingPage() {
+function ProcessingContent() {
   const params = useParams()
   const router = useRouter()
   const catalogId = params.id as string
@@ -93,5 +93,13 @@ export default function ProcessingPage() {
         )}
       </div>
     </main>
+  )
+}
+
+export default function ProcessingPage() {
+  return (
+    <Suspense fallback={<p className="p-8 text-center">در حال بارگذاری...</p>}>
+      <ProcessingContent />
+    </Suspense>
   )
 }
