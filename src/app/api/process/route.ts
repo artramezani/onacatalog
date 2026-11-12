@@ -3,7 +3,7 @@ import { supabaseAdmin } from '@/lib/supabase-admin'
 import { fromBuffer } from 'pdf2pic'
 import sharp from 'sharp'
 
-export const runtime = 'nodejs'
+
 export const maxDuration = 300 // ۵ دقیقه
 
 export async function POST(req: NextRequest) {
