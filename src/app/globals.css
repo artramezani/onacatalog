@@ -1,6 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+
+  --font-vazir: 'Vazirmatn', sans-serif;
+}
 
 @layer base {
   body {
